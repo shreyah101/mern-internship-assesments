@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information Form</title>
+
+    <style>
+        body{
+            background: #d9d9d9;
+            font-family: Arial, sans-serif;
+        }
+
+        .container{
+            width: 420px;
+            margin: 20px auto;
+            background: #eeeeee;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        fieldset{
+            border: 1px solid black;
+            padding: 15px;
+        }
+
+        legend{
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        label{
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        textarea{
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #bdbdbd;
+            border-radius: 4px;
+            background: #eaf1fb;
+            font-size: 15px;
+        }
+
+        textarea{
+            resize: none;
+            height: 60px;
+        }
+
+        .gender{
+            margin-top: 10px;
+        }
+
+        .gender input{
+            margin-left: 10px;
+        }
+
+        button{
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background: white;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background: #dcdcdc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form>
+
+            <fieldset>
+
+                <legend>User personal information</legend>
+
+                <label>Enter your full name</label>
+                <input type="text" placeholder="Rahul Kumar">
+
+                <label>Enter your email</label>
+                <input type="email" placeholder="geeks@12345gmail.com">
+
+                <label>Enter your password</label>
+                <input type="password">
+
+                <label>Confirm your password</label>
+                <input type="password">
+
+                <label>Enter your gender</label>
+
+                <div class="gender">
+                    <input type="radio" name="gender" checked>Male
+
+                    <input type="radio" name="gender">Female
+
+                    <input type="radio" name="gender">Others
+                </div>
+
+                <label>Enter your Date of Birth</label>
+                <input type="date">
+
+                <label>Enter your Address:</label>
+                <textarea placeholder="Noida Sector 137"></textarea>
+
+                <button type="submit">submit</button>
+
+            </fieldset>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
