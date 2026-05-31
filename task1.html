@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Customer Feedback Form</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f5f5f5;
+        }
+
+        .container{
+            width: 700px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+        }
+
+        h2{
+            margin-bottom: 20px;
+        }
+
+        label{
+            font-weight: bold;
+        }
+
+        .required{
+            color: red;
+        }
+
+        .name-row{
+            display: flex;
+            gap: 20px;
+            margin-top: 5px;
+        }
+
+        .name-box{
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"],
+        input[type="email"]{
+            width: 300px;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .small-text{
+            font-size: 12px;
+            color: gray;
+            margin-top: 3px;
+        }
+
+        .stars{
+            color: orange;
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td{
+            padding: 10px;
+            text-align: center;
+        }
+
+        th:first-child,
+        td:first-child{
+            text-align: left;
+        }
+
+        tr:nth-child(even){
+            background: #f2f2f2;
+        }
+
+        button{
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <form>
+
+        <!-- Name -->
+        <label>Name <span class="required">*</span></label>
+
+        <div class="name-row">
+            <div class="name-box">
+                <input type="text" name="firstName">
+                <span class="small-text">First</span>
+            </div>
+
+            <div class="name-box">
+                <input type="text" name="lastName">
+                <span class="small-text">Last</span>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Email -->
+        <label>Email <span class="required">*</span></label><br>
+        <input type="email" name="email">
+
+        <br><br>
+
+        <!-- Experience -->
+        <label>Your Experience <span class="required">*</span></label>
+
+        <div class="stars">
+            ★ ★ ★ ★ ★
+        </div>
+
+        <p>Overall, how would you rate your experience with us?</p>
+
+        <!-- Satisfaction Table -->
+        <label>How satisfied are you with <span class="required">*</span></label>
+
+        <table border="0">
+            <tr>
+                <th></th>
+                <th>Very Unsatisfied</th>
+                <th>Unsatisfied</th>
+                <th>Neutral</th>
+                <th>Satisfied</th>
+                <th>Very Satisfied</th>
+            </tr>
+
+            <tr>
+                <td>Purchase</td>
+                <td><input type="radio" name="purchase"></td>
+                <td><input type="radio" name="purchase"></td>
+                <td><input type="radio" name="purchase"></td>
+                <td><input type="radio" name="purchase"></td>
+                <td><input type="radio" name="purchase"></td>
+            </tr>
+
+            <tr>
+                <td>Service</td>
+                <td><input type="radio" name="service"></td>
+                <td><input type="radio" name="service"></td>
+                <td><input type="radio" name="service"></td>
+                <td><input type="radio" name="service"></td>
+                <td><input type="radio" name="service"></td>
+            </tr>
+
+            <tr>
+                <td>Company Overall</td>
+                <td><input type="radio" name="company"></td>
+                <td><input type="radio" name="company"></td>
+                <td><input type="radio" name="company"></td>
+                <td><input type="radio" name="company"></td>
+                <td><input type="radio" name="company"></td>
+            </tr>
+        </table>
+
+        <br>
+
+        <!-- Recommendation Table -->
+        <label>How likely are you to <span class="required">*</span></label>
+
+        <table border="0">
+            <tr>
+                <th></th>
+                <th>Very Unlikely</th>
+                <th>Unlikely</th>
+                <th>Neutral</th>
+                <th>Likely</th>
+                <th>Very Likely</th>
+            </tr>
+
+            <tr>
+                <td>Buy from us again</td>
+                <td><input type="radio" name="buy"></td>
+                <td><input type="radio" name="buy"></td>
+                <td><input type="radio" name="buy"></td>
+                <td><input type="radio" name="buy"></td>
+                <td><input type="radio" name="buy"></td>
+            </tr>
+
+            <tr>
+                <td>Recommend our product to others</td>
+                <td><input type="radio" name="product"></td>
+                <td><input type="radio" name="product"></td>
+                <td><input type="radio" name="product"></td>
+                <td><input type="radio" name="product"></td>
+                <td><input type="radio" name="product"></td>
+            </tr>
+
+            <tr>
+                <td>Recommend our company to others</td>
+                <td><input type="radio" name="recommend"></td>
+                <td><input type="radio" name="recommend"></td>
+                <td><input type="radio" name="recommend"></td>
+                <td><input type="radio" name="recommend"></td>
+                <td><input type="radio" name="recommend"></td>
+            </tr>
+        </table>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
