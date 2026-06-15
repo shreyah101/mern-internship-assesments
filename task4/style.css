@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #38bdf8;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #94a3b8;
+    font-size: 1rem;
+}
+
+#user-container {
+    display: grid;
+    /* This creates a responsive grid that automatically adjusts column count based on screen size */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.user-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px -5px rgba(0, 0, 0, 0.4);
+    border-color: #38bdf8;
+}
+
+.user-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 2px solid #38bdf8;
+    background-color: #cbd5e1;
+}
+
+.user-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: #f1f5f9;
+}
+
+.user-card .username {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+}
+
+.user-card .email {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    background: #0f172a;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    width: 100%;
+    word-break: break-all;
+}
+
+.error-msg {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #ef4444;
+    font-size: 1.2rem;
+}
